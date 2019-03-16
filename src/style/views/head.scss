@@ -1,0 +1,127 @@
+@import "../partials/taxonomies.scss";
+
+.top-head {
+  background-color: $color-primary;
+  height: 57px;
+  .bg_img {
+    background: url(../../img/Bg1-1.svg) center no-repeat;
+    width: 99%;
+    height: 57px;
+    position: absolute;
+    background-size: cover;
+  }
+  .support_and_sale {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+    height: 57px;
+    span {
+      @include font(20px, $font-color-2, 400, $font-thin);
+      a {
+        @include font(20px, $font-color-2, 400, $font-regular);
+      }
+    }
+  }
+
+  .login_and_liveChat {
+    display: flex;
+    justify-content: space-between;
+    height: 57px;
+    @include font(22px, $font-color-1, 400, $font-regular);
+    text-transform: uppercase;
+    .login {
+      &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 10px;
+        width: 41px;
+        height: 25px;
+        background: url(../../img/Login.svg) no-repeat;
+        margin-bottom: -1.1%;
+      }
+      &:hover {
+        color: $font-color-3;
+        &::after {
+          background: url(../../img/Login2.svg) no-repeat;
+        }
+      }
+    }
+
+    .liveChat {
+      &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 10px;
+        width: 51px;
+        height: 30px;
+        background: url(../../img/Chat.svg) no-repeat;
+        background-size: contain;
+        margin-bottom: -5%;
+      }
+      &:hover {
+        color: $font-color-3;
+        &::after {
+          background: url(../../img/Chat2.svg) no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.down-head {
+  background-color: $color-secondary;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 2px 4px 7px #95aeb6;
+  .main_menu {
+    .main_menu_items {
+      display: flex;
+      flex-basis: 100%;
+      justify-content: space-between;
+      padding: 0;
+      margin-top: 17px;
+      .main_menu_item {
+        display: inline-block;
+        text-align: center;
+        line-height: 0.2;
+        a {
+          position: relative;
+          @include font(20px, $font-color-1, 400, $font-regular);
+          text-transform: uppercase;
+          padding: 7px 0 7px 15px;
+          &::after {
+            content: "I";
+            padding-left: 18px;
+            color: $font-color-1;
+          }
+          &:hover {
+            background-color: $color-btn-2-hover;
+            text-decoration: none;
+            &::after {
+              content: "I";
+              color: transparent;
+            }
+            &::before{
+              content: '';
+              position: absolute;
+              //left:-30px;
+              //background-color: $color-btn-2-hover;
+              z-index:1;
+            }
+          }
+        }
+      }
+      .main_menu_item:last-child {
+        a {
+          &::after {
+            content: "";
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+

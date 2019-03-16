@@ -1,0 +1,31 @@
+
+
+/*
+* Custom Bootstrap
+*/
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+
+/*
+* Slick slider
+*/
+
+@import "modules/slick.scss";
+
+
+/*
+* Custom
+*/
+@import "partials/taxonomies.scss";
+@import "partials/fonts.scss";
+@import "partials/buttons.scss";
+@import "partials/colors.scss";
+@import "partials/normalize.css";
+/*
+* Views
+*/
+@import "views/head.scss";
+@import "views/main.scss";
+
+
+
+
