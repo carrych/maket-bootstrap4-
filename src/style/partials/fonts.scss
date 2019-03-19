@@ -5,7 +5,7 @@
   src: url('/fonts/roboto-regular/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/roboto-regular/Roboto-Regular-webfont.woff') format('woff'),
   url('/fonts/roboto-regular/Roboto-Regular-webfont.ttf') format('truetype'),
-  url('/fonts/roboto-regular/Roboto-Regular-webfont.svg#CenturyGothic') format('svg');
+  url('/fonts/roboto-regular/Roboto-Regular-webfont.svg#Roboto-Regular-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
   src: url('/fonts/roboto-bold/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/roboto-bold/Roboto-Bold-webfont.woff') format('woff'),
   url('/fonts/roboto-bold/Roboto-Bold-webfont.ttf') format('truetype'),
-  url('/fonts/roboto-bold/Roboto-Bold-webfont.svg#CenturyGothic-Bold') format('svg');
+  url('/fonts/roboto-bold/Roboto-Bold-webfont.svg#Roboto-Bold-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
   src: url('/fonts/roboto-thin/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/roboto-thin/Roboto-Thin-webfont.woff') format('woff'),
   url('/fonts/roboto-thin/Roboto-Thin-webfont.ttf') format('truetype'),
-  url('/fonts/roboto-thin/Roboto-Thin-webfont.svg#CenturyGothic-Italic') format('svg');
+  url('/fonts/roboto-thin/Roboto-Thin-webfont.svg#Roboto-Thin-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,7 +35,7 @@
   src: url('/fonts/roboto-medium/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/roboto-medium/Roboto-Medium-webfont.woff') format('woff'),
   url('/fonts/roboto-medium/Roboto-Medium-webfont.ttf') format('truetype'),
-  url('/fonts/roboto-medium/Roboto-Medium-webfont.svg#CenturyGothic-Italic') format('svg');
+  url('/fonts/roboto-medium/Roboto-Medium-webfont.svg#Roboto-Medium-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,19 +45,31 @@
   src: url('/fonts/arial narrow/arialn-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/arial narrow/arialn-webfont.woff') format('woff'),
   url('/fonts/arial narrow/arialn-webfont.ttf') format('truetype'),
-  url('/fonts/arial narrow/arialn-webfont.svg#CenturyGothic-Italic') format('svg');
+  url('/fonts/arial narrow/arialn-webfont.svg#arialn-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/fonts/font-awesome/fontawesome-webfont.eot'),
+  src:
   url('/fonts/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/font-awesome/fontawesome-webfont.woff') format('woff'),
   url('/fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'),
   url('/fonts/font-awesome/fontawesome-webfont.ttf') format('truetype'),
   url('/fonts/font-awesome/fontawesome-webfont.svg#fontawesome-webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontRajdhani';
+  src: url('/fonts/rajdhani-bold/rajdhani-bold-webfont.eot'),
+  url('/fonts/rajdhani-bold/rajdhani-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/rajdhani-bold/rajdhani-bold-webfont.woff') format('woff'),
+  url('/fonts/rajdhani-bold/rajdhani-bold-webfont.woff2') format('woff2'),
+  url('/fonts/rajdhani-bold/rajdhani-bold-webfont.ttf') format('truetype'),
+  url('/fonts/rajdhani-bold/rajdhani-bold-webfont.svg#rajdhani-bold-webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -68,6 +80,7 @@ $font-bold: 'RobotoBold';
 $font-arial: 'ArialNarrow';
 $font-thin: 'RobotoThin';
 $font-awesome: 'FontAwesome';
+$font-rajdhani-bold: 'FontRajdhani';
 
 @mixin font($font-size:18px,$font-color:$font-color-4,$font-weight:400,$font-family:$font-regular) {
   font-size: $font-size;
