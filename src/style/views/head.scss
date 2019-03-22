@@ -3,6 +3,7 @@
 .top-head {
   background-color: $color-primary;
   height: 57px;
+
   .bg_img {
     background: url(../../img/Bg1-1.svg) center no-repeat;
     width: 99%;
@@ -22,6 +23,9 @@
         @include font(20px, $font-color-2, 400, $font-regular);
       }
     }
+    @media screen and (max-width: 1199px){
+          justify-content: space-between;
+      }
   }
 
   .login_and_liveChat {
@@ -31,6 +35,10 @@
     @include font(22px, $font-color-1, 400, $font-regular);
     text-transform: uppercase;
     .login {
+      a {
+        @include font(22px, $font-color-1, 400, $font-regular);
+        text-decoration: none;
+      }
       &::after {
         content: "";
         display: inline-block;
@@ -49,6 +57,10 @@
     }
 
     .liveChat {
+      a {
+        @include font(22px, $font-color-1, 400, $font-regular);
+        text-decoration: none;
+      }
       &::after {
         content: "";
         display: inline-block;
@@ -75,6 +87,139 @@
   position: relative;
   z-index: 1;
   box-shadow: 2px 4px 7px #95aeb6;
+  @media screen and (max-width: 1199px){
+    height: 50px;
+    line-height: 50px;
+  }
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    top: 15px;
+    left: 20px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    a {
+      text-decoration: none;
+      @include font(22px, $font-color-1, 400, $font-regular);
+      transition: color 0.3s ease;
+      &:hover{
+        color:  $font-color-6;
+      }
+    }
+    input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+    }
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: $color-third-1;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+      opacity 0.55s ease;
+    }
+    span:first-child {
+      transform-origin: 0% 0%;
+    }
+    span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: $color-third-1;
+    }
+    input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    input:checked ~ ul {
+      transform: none;
+    }
+  }
+
+  #menu
+  {
+    position: absolute;
+    width: 500px;
+    margin: -100px 0 0 -130px;
+    padding: 125px 100px 50px 125px;
+    background: $color-secondary;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-150%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    li {
+      padding: 10px 0;
+
+    }
+  }
+
+  .login,.liveChat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    letter-spacing: 1.1px;
+    flex-basis: 100%;
+    line-height: 50px;
+    a {
+      @include font(22px, $font-color-1, 400, $font-regular);
+      text-decoration: none;
+    }
+    text-transform: uppercase;
+  }
+
+  .login {
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 12px;
+      width: 41px;
+      height: 25px;
+      background: url(../../img/Login.svg) no-repeat;
+    }
+    &:hover {
+      background-color: $color-third-6;
+    }
+  }
+
+  .liveChat {
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 51px;
+      height: 30px;
+      background: url(../../img/Chat.svg) no-repeat;
+      background-size: contain;
+    }
+    &:hover {
+      background-color: $color-third-6;
+    }
+  }
+
   .main_menu {
     .main_menu_items {
       display: flex;
@@ -121,5 +266,6 @@
       }
     }
   }
+
 }
 

@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script
+            src="http://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -25,7 +26,7 @@
         <div class="bg_img"></div>
         <div class="container">
             <div class="row ">
-                <div class="col-lg-7">
+                <div class="col-lg-8 offset-lg-2 col-xl-7 offset-xl-0">
                     <div class="support_and_sale align-items-center">
                         <span class="Toll">Sales toll free:
                             <a href="tel:1 (877) 894-0925">1 (877) 894-0925</a></span>
@@ -33,19 +34,11 @@
                             <a href="tel:1 (888) 901-8317">1 (888) 901-8317</a></span>
                     </div>
                 </div>
-                <div class="col-lg-4 offset-lg-1">
+                <div class="d-none d-xl-block col-xl-4 offset-xl-1 ">
                     <div class="login_and_liveChat align-items-center">
-                        <span class="login">login</span>
-                        <span class="liveChat">live chat</span>
+                        <span class="login"> <a href="#">login</a> </span>
+                        <span class="liveChat"><a href="#">live chat</a></span>
                     </div>
-                    <!--<div class="social-icons">-->
-                    <!--<ul>-->
-                    <!--<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>-->
-                    <!--<li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>-->
-                    <!--<li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>-->
-                    <!--<li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>-->
-                    <!--</ul>-->
-                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -53,7 +46,31 @@
     <div class="container-fluid down-head">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-1 d-lg-block d-xl-none">
+                    <nav role="navigation">
+                        <div id="menuToggle">
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="menu">
+                                <a href="#"><li class="main_menu_item">home</li></a>
+                                <a href="#"><li>about us</li></a>
+                                <a href="#"><li>prices</li></a>
+                                <a href="#"><li>discounts</li></a>
+                                <hr>
+                                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-2 offset-lg-6 d-lg-block d-xl-none">
+                    <span class="login"><a href="#">login</a></span>
+                </div>
+                <div class="col-lg-3 d-lg-block d-xl-none">
+                    <span class="liveChat"><a href="#">live chat</a></span>
+                </div>
+                <div class="col-xl-12 d-none d-xl-block">
                     <nav class="main_menu">
                         <ul class="main_menu_items ">
                             <li class="main_menu_item"><a href="#">home</a></li>
@@ -73,6 +90,7 @@
     </div>
 </header>
 
+<script src="../../../bank/js/main6.js"></script>
 <body>
 <main class="main_content">
     <header>
@@ -80,17 +98,17 @@
             <div class="bg_girl"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-xl-7">
                         <a href="#" class="logo"></a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-xl-7">
                         <h1 class="main_title">things go better with us!</h1>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-xl-6">
                         <div class="offer">
                             <h3 class="offer_title">what we offer you:</h3>
                             <ul class="offer_items">
@@ -109,7 +127,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-7 col-xl-6">
                         <div class="group_of_btns">
                             <a href="#" class="btn-small">Essays & Research Papers</a>
                             <a href="#" class="btn-small">Dissertations & Thesess</a>
@@ -128,7 +146,7 @@
             <div class="bg_img"></div>
             <div class="container">
                 <div class="row line_1">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <div class="title_plus_percent">
                             <h2>Get a price quote</h2>
                             <div class="percent_part">
@@ -140,7 +158,7 @@
                     </div>
                 </div>
                 <div class="row line_2">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <form class="default_form">
                             <div class="order_item">
                                 <label>title of your paper</label>
@@ -173,7 +191,7 @@
                     </div>
                 </div>
                 <div class="row line_3">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <form class="default_form">
                             <div class="order_item">
                                 <label>urgency</label>
@@ -203,12 +221,12 @@
             <div class="bg_img"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <h2 class="main_title">Essay writing is challenging, difficult and time-consuming</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <p class="text">Are students overseas concerned about different research papers writing?
                             Certainly yes! It is often much harder for them to keep up with written essay assignments,
                             especially at higher level education. Though they may study hard, but they may still be
@@ -222,7 +240,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="offset-lg-1 col-lg-5 offset-xl-0 col-xl-3">
                         <div class="part">
                             <div class="block">
                                 <div class="standards"></div>
@@ -239,7 +257,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-5 col-xl-3">
                         <div class="part">
                             <div class="block">
                                 <div class="for_students"></div>
@@ -260,7 +278,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="offset-lg-1 col-lg-5 offset-xl-0 col-xl-3">
                         <div class="part">
                             <div class="block">
                                 <div class="partner"></div>
@@ -285,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-5 col-xl-3">
                         <div class="part">
                             <div class="block">
                                 <div class="solution"></div>
@@ -316,18 +334,18 @@
             <div class="bg_img"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <h2 class="main_title">Why order paper assignments from BestWritingHelp.org?</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <p class="sub_title">The features that define our uniqueness when you order paper
                             assignments:</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 1
@@ -337,7 +355,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 2
@@ -348,7 +366,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 3
@@ -358,7 +376,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 4
@@ -368,9 +386,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 5
@@ -380,7 +396,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 6
@@ -390,7 +406,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 7
@@ -400,7 +416,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4 col-xl-3">
                         <div class="block">
                             <div class="number">
                                 8
@@ -419,41 +435,76 @@
             <div class="bg_img"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <h2 class="main_title">how it works?</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="menu">
-                        <div class="col-lg-7">
-                            <ol class="menu_items">
-                                <li class="menu_item1"><a href="#"><h4>Make your way to the order page and complete</h4>
-                                </a></li>
-                                <li class="menu_item2"><a href="#"><h4>Continue to the payment page</h4></a></li>
-                                <li class="menu_item3"><a href="#"><h4>Monitor your email for confirmation of your order
-                                    and
-                                    save</h4></a></li>
-                                <li class="menu_item4"><a href="#"><h4>Use your personal account area to contact your
+                    <div class="col-lg-12 col-xl-12">
+                        <div class="menu_items">
+                            <div class="menu_item1">
+                                <div class="title"><a href="#"><h4>Make your way to the order page and complete</h4>
+                                </a></div>
+                                <div class="content">
+                                    <div class="bg_img1"></div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
+                            </div>
+                            <div class="menu_item2">
+                                <div class="title">
+                                    <a href="#"><h4>Continue to the payment page</h4></a>
+                                </div>
+                                <div class="content">
+                                    <div class="bg_img2"></div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
+                            </div>
+                            <div class="menu_item3">
+                                <div class="title"><a href="#"><h4>Monitor your email for confirmation of your
+                                    order and save</h4></a>
+                                </div>
+                                <div class="content">
+                                    <div class="bg_img3"></div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
+                            </div>
+                            <div class="menu_item4">
+                                <div class="title"><a href="#"><h4>Use your personal account area to contact your
                                     writer and
-                                    our support personnel</h4></a></li>
-                                <li class="menu_item5"><a href="#"><h4>Use the link from our email to download your
-                                    paper</h4></a></li>
-                                <li class="menu_item6"><a href="#"><h4>Give us feedback!</h4></a></li>
-                            </ol>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="text_and_img">
-                                <div class="bg_img1"></div>
-                                <p class="text">Let us know what you think of your paper once you have reviewed it. Our
-                                    email will contain a link to our customer satisfaction survey form. Please feel free
-                                    to fill it in. You may also request revisions within two weeks following the
-                                    deadline. Revisions will be free unless you modify your original instructions.</p>
+                                    our support personnel</h4></a>
+                                </div>
+                                <div class="content">
+                                    <div class="bg_img4"></div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
+                            </div>
+                            <div class="menu_item5">
+                                <div class="title"><a href="#"><h4>Use the link from our email to download your
+                                    paper</h4></a>
+                                </div>
+                                <div class="content">
+                                    <div class="bg_img5"></div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
+                            </div>
+                            <div class="menu_item6">
+                                <div class="title"><a href="#"><h4>Give us feedback!</h4></a></div>
+                                <div class="content">
+                                    <div class="bg_img6"></div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-xl-12">
                         <div class="position">
                             <div class="btn_item">
                                 <a href="#" class="order">order now</a>
@@ -465,14 +516,26 @@
         </div>
     </section>
     <section>
-        <div class="container-fluid cards_plus_socials">
+        <div class="container-fluid cards_plus_socials_bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="debit_cards"></div>
-                        <div class="socialFace"></div>
-                        <div class="socialTwit"></div>
-                        <div class="socialPint"></div>
+                    <div class="col-lg-12 col-xl-12">
+                        <div class="cards_and_social">
+                            <a href="#">
+                                <div class="debit_cards"></div>
+                            </a>
+                            <div class="social">
+                                <a href="#">
+                                    <div class="socialFace"></div>
+                                </a>
+                                <a href="#">
+                                    <div class="socialTwit"></div>
+                                </a>
+                                <a href="#">
+                                    <div class="socialPint"></div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -481,25 +544,118 @@
 </main>
 
 <footer>
-    <!--<section></section>-->
-    <!--<div class="footer">-->
-    <!--<div class="container-fluid">-->
-    <!--<div class="container">-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-4 col-sm-12 col-xs-12">-->
-    <!--<i class="fa fa-thumb-tack hidden-xs hidden-sm" aria-hidden="true"></i>-->
-    <!--<span class="address hidden-xs hidden-sm">Weston Pointe II, 2200 N. Commerce Parkway, Weston, Florida, 33326</span>-->
-    <!--<i class="fa fa-phone hidden-xs hidden-sm" aria-hidden="true"></i>-->
-    <!--<span class="tel hidden-xs hidden-sm">+1(754) 989 0251</span>-->
-    <!--<i class="fa fa-envelope hidden-xs hidden-sm" aria-hidden="true"></i>-->
-    <!--<span class="email hidden-xs hidden-sm">support@123helpme.org</span>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</section>-->
+    <section>
+        <div class="container-fluid footer">
+            <div class="bg_img"></div>
+            <div class="container">
+                <div class="row footer_row1">
+                    <div class="col-lg-3 col-xl-2">
+                        <p class="text">
+                            <a href="#">Site map</a>
+                            <a href="#">Free essays</a>
+                            <a href="#">Custom Research Papers</a>
+                            <a href="#">Custom Term Paper</a>
+                            <a href="#"> Writing Service</a>
+                            <a href="#">Custom Writing</a>
+                            <a href="#">Custom Writing Services</a>
+                            <a href="#">Custom Written Essay</a>
+                            <a href="#">Do My Essay</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-xl-2">
+                        <p class="text">
+                            <a href="#"> Do My Paper</a>
+                            <a href="#"> Editing Service</a>
+                            <a href="#"> Essay Buyarch</a>
+                            <a href="#"> Essay Editing</a>
+                            <a href="#"> Essay Help</a>
+                            <a href="#"> Essay Online</a>
+                            <a href="#"> Essay Order</a>
+                            <a href="#"> Essay Paper</a>
+                            <a href="#"> Essay Papers to Buy</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-xl-2">
+                        <p class="text">
+                            <a href="#">Essay Service</a>
+                            <a href="#">Essay Writer</a>
+                            <a href="#">Essay Writing</a>
+                            <a href="#">Essay Writing Service</a>
+                            <a href="#">Essay Writing Services</a>
+                            <a href="#">Essay Writing Online</a>
+                            <a href="#">Essays Buy</a>
+                            <a href="#">Essays for Sale</a>
+                            <a href="#">Essays Order</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-xl-2">
+                        <p class="text">
+                            <a href="#">Essays to Buy </a>
+                            <a href="#">Essays Written</a>
+                            <a href="#">Formatting Service</a>
+                            <a href="#">Freelance Essay Writing</a>
+                            <a href="#">Grant Writing </a>
+                            <a href="#">How to Buy an Essay</a>
+                            <a href="#">Non - Plagiarized Essay</a>
+                            <a href="#">Online Essay</a>
+                            <a href="#">Online Research Paper</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-xl-2">
+                        <p class="text">
+                            <a href="#">Online Term Paper</a>
+                            <a href="#">Online Writing</a>
+                            <a href="#">Order an Essay</a>
+                            <a href="#">Order Custom Essay</a>
+                            <a href="#">Order Custom Paper</a>
+                            <a href="#">Order Essay</a>
+                            <a href="#">Order Essays</a>
+                            <a href="#">Original Essay</a>
+                            <a href="#">Paper Service</a>
+                        </p>
+                    </div>
+                    <div class="d-lg-none d-xl-block col-xl-2">
+                        <p class="text">
+                            <a href="#">Paper Writer</a>
+                            <a href="#">Paper Writing</a>
+                            <a href="#">Paper Writing Service</a>
+                            <a href="#">Personal Narrative Essay</a>
+                            <a href="#">Academic Essays Writers</a>
+                            <a href="#">Buy Cheap Essay</a>
+                            <a href="#">Buy Custom</a>
+                            <a href="#">Paper Buy Custom </a>
+                            <a href="#">Buy Research Paper</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row footer_row2">
+                    <div class="col-lg-12 col-xl-12">
+                        <nav class="footer_menu">
+                            <ul class="footer_menu_items ">
+                                <li class="footer_menu_item"><a href="#">Business </a></li>
+                                <li class="footer_menu_item"><a href="#">Economics</a></li>
+                                <li class="footer_menu_item"><a href="#">Informative</a></li>
+                                <li class="footer_menu_item"><a href="#">Literature </a></li>
+                                <li class="footer_menu_item"><a href="#">Management</a></li>
+                                <li class="footer_menu_item"><a href="#">Political</a></li>
+                                <li class="footer_menu_item"><a href="#">Psychology</a></li>
+                                <li class="footer_menu_item"><a href="#">Research</a></li>
+                                <li class="footer_menu_item"><a href="#">Review</a></li>
+                                <li class="footer_menu_item"><a href="#">Technology</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row footer_row3">
+                    <div class="col-xl-12">
+                        <p class="text">Terms and Conditions Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="more_info_button"><a href="#"></a></div>
+        </div>
+    </section>
 </footer>
-<!--<script src="js/main.js"></script>-->
+<script src="js/main.js"></script>
 </body>
 </html>

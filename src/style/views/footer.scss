@@ -1,0 +1,126 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  height: 375px;
+  background-color: $color-primary;
+  @media screen and (max-width: 1199px) {
+    height: 400px;
+    .col-lg-2,.col-lg-3{
+      padding: 0;
+    }
+  }
+  .bg_img {
+    background: url(../../img/Bg1.svg) center no-repeat;
+    width: 100%;
+    height: 375px;
+    background-size: contain;
+    position: absolute;
+  }
+  .more_info_button {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: $color-third-1;
+    bottom: 17%;
+    left: 50%;
+    @media screen and (max-width: 1199px) {
+      bottom: 33.5%;
+    }
+    a::before {
+      @include font(30px, $font-color-6, 400, $font-awesome);
+      content: '\f067';
+      position: absolute;
+      bottom: -6px;
+      left: 6px;
+    }
+  }
+
+  .footer_row1 {
+    border-bottom: 2px solid $color-third-1;
+    .text {
+      display: flex;
+      flex-basis: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 24px 0 10px 0;
+      a {
+        text-decoration: none;
+        @include font(18px, $font-color-1, 400, $font-arial);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer_row2 {
+    .footer_menu {
+      .footer_menu_items {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding: 0;
+        margin-top: 30px;
+        @media screen and (max-width: 1199px) {
+          display: inline-block;
+          text-align: center;
+          .footer_menu_item:nth-child(7){
+            &::after {
+              position: absolute;
+              content: "";
+              height: 15px;
+              width: 5px;
+              background-color: $color-primary;
+              top: 35px;
+              right: 7%;
+            }
+          }
+        }
+        .footer_menu_item {
+          display: inline-block;
+          text-align: center;
+          line-height: 0.2;
+          a {
+            position: relative;
+            @include font(16px, $font-color-1, 400, $font-regular);
+            text-transform: uppercase;
+            padding: 5px 0 5px 5px;
+            &::after {
+              content: "I";
+              padding-left: 10px;
+              color: $font-color-1;
+            }
+            &:hover {
+              background-color: $color-btn-2-hover;
+              text-decoration: none;
+              color: $font-color-6;
+              &::after {
+                content: "I";
+                color: transparent;
+              }
+            }
+          }
+        }
+
+        .footer_menu_item:last-child {
+          a {
+            &::after {
+              content: "";
+              padding-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer_row3{
+    .text{
+      margin: 0;
+      text-align: center;
+      line-height: 25px;
+      @include font(16px, $font-color-1, 400, $font-arial);
+    }
+  }
+}

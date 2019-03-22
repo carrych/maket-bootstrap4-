@@ -1,29 +1,19 @@
 @import "fonts.scss";
 
-body{
-  @include font(18px,$font-color-4,400,$font-arial);
-  max-width: 1920px;
-  min-width: 320px;
-}
-
-h1{
-  @include font(32px,$font-color-3,700,$font-bold);
+h1,h2,h3,h4{
   text-transform: uppercase;
 }
 
 h2{
   @include font(28px,$font-color-3,700,$font-bold);
-  text-transform: uppercase;
   margin: 0;
 }
 
 h3{
   @include font(21px,$font-color-4,500,$font-medium);
-  text-transform: uppercase;
 }
 h4{
   @include font(18px,$font-color-3,700,$font-medium);
-  text-transform: uppercase;
 }
 
 p{

@@ -1,17 +1,11 @@
-
-
 /*
 * Custom Bootstrap
 */
 @import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
-
 /*
 * Slick slider
 */
-
 @import "modules/slick.scss";
-
-
 /*
 * Custom
 */
@@ -20,12 +14,12 @@
 @import "partials/buttons.scss";
 @import "partials/colors.scss";
 @import "partials/normalize.css";
-@import "partials/media.scss";
 /*
 * Views
 */
 @import "views/head.scss";
 @import "views/main.scss";
+@import "views/footer.scss";
 
 
 
