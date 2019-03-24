@@ -3,7 +3,9 @@
 .top-head {
   background-color: $color-primary;
   height: 57px;
-
+  @media screen and (max-width: 575px){
+    height: 55px;
+  }
   .bg_img {
     background: url(../../img/Bg1-1.svg) center no-repeat;
     width: 99%;
@@ -11,16 +13,39 @@
     position: absolute;
     background-size: cover;
   }
+
+  .logo {
+    display: flex;
+    margin:3px 0;
+    background: url(../../img/Logo1.svg) center no-repeat;
+    background-size: contain;
+    height: 50px;
+    flex-basis: 100%;
+  }
   .support_and_sale {
     display: flex;
+    position: absolute;
     flex-direction: row;
     justify-content: space-between;
     flex-basis: 100%;
     height: 57px;
+    @media screen and (max-width: 769px){
+      flex-direction: column;
+      height: 50px;
+      top: 10%;
+      right: 3%;
+      z-index: 2;
+    }
     span {
       @include font(20px, $font-color-2, 400, $font-thin);
       a {
         @include font(20px, $font-color-2, 400, $font-regular);
+        @media screen and (max-width: 769px) {
+          font-size: 17px;
+        }
+      }
+      @media screen and (max-width: 769px) {
+        font-size: 17px;
       }
     }
     @media screen and (max-width: 1199px){
@@ -91,6 +116,7 @@
     height: 50px;
     line-height: 50px;
   }
+
   #menuToggle
   {
     display: block;
@@ -100,6 +126,13 @@
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
+    @media screen and (max-width: 769px) {
+      top: -37px;
+      left: 3000%;
+    }
+    @media screen and (max-width: 575px){
+      left: 90%;
+    }
     a {
       text-decoration: none;
       @include font(22px, $font-color-1, 400, $font-regular);
@@ -113,8 +146,8 @@
       width: 40px;
       height: 32px;
       position: absolute;
-      top: -7px;
-      left: -5px;
+      top: 0;
+      left: 0;
       cursor: pointer;
       opacity: 0; /* hide this */
       z-index: 2; /* and place it over the hamburger */
@@ -165,13 +198,21 @@
     padding: 125px 100px 50px 125px;
     background: $color-secondary;
     list-style-type: none;
+    text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(-150%, 0);
+    transform: translateY(-100%);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    @media screen and (max-width: 769px){
+      margin: -100px 0 0 -250px;
+      padding: 100px 50px 0px 50px;
+      text-align: center;
+    }
+    @media screen and (max-width: 580px){
+      margin: -100px 0 0 -350px;
+    }
     li {
       padding: 10px 0;
-
     }
   }
 
