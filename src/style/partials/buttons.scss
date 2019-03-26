@@ -1,28 +1,28 @@
 @import "fonts";
 @import "colors.scss";
 
-
-.btn-biger{
-  width:256px;
+.btn-biger {
+  width: 256px;
   height: auto;
   display: inline-block;
   text-align: center;
   color: $color-btn-1;
   background-color: $color-btn-1;
   border-radius: 4px;
-  border:1px solid #fff;
+  border: 1px solid #fff;
   font-family: $font-bold;
   font-size: 22px;
   font-weight: 700;
   line-height: 22px;
   padding: 23px 0;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $color-btn-1-hover;
     background-color: $color-btn-1-hover;
   }
 }
-.btn-big{
+
+.btn-big {
   display: inline-block;
   width: 350px;
   border-radius: 5px;
@@ -34,14 +34,14 @@
   padding: 15px 0;
   text-transform: uppercase;
   text-align: center;
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: #fff;
     background-color: $color-btn-1-hover;
   }
 }
 
-.btn-small{
+.btn-small {
   display: inline-block;
   width: 230px;
   height: 35px;
@@ -50,29 +50,35 @@
   text-align: center;
   line-height: 30px;
   text-decoration: none;
-  &:hover{
+  &:hover {
     background-color: $color-btn-2-hover;
     color: $color-primary;
     text-decoration: none;
   }
 }
 
-.default_form{
+.default_form {
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
-  .order_item{
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+  }
+  .order_item {
     position: relative;
     z-index: 1;
     display: inline-block;
     width: 33.33%;
     padding: 5px 15px;
-    label{
-      @include font(16px,$font-color-1,400,$font-regular);
+    @media screen and (max-width: 769px) {
+      width: 100%;
+    }
+    label {
+      @include font(16px, $font-color-1, 400, $font-regular);
       text-transform: uppercase;
     }
-    &::after{
-      @include font(16px,$font-color-4,400,$font-awesome);
+    &::after {
+      @include font(16px, $font-color-4, 400, $font-awesome);
       content: "\f107";
       padding: 0 8px;
       position: absolute;
@@ -85,39 +91,46 @@
       box-sizing: border-box;
       color: $font-color-3;
     }
-    select{
+    select {
       display: inline-block;
-      @include font(15px,$font-color-4,300,$font-regular);
+      @include font(15px, $font-color-4, 300, $font-regular);
       position: relative;
       line-height: 20px;
       background: $color-third-6;
       padding: 5px 15px;
       width: 100%;
       border: none;
-      appearance:none;
-      option{
-        @include font(15px,$font-color-4,300,$font-regular);
+      appearance: none;
+      option {
+        @include font(15px, $font-color-4, 300, $font-regular);
       }
     }
   }
 }
 
-.btn_item{
+.btn_item {
   width: 33.33%;
   padding: 20px 15px;
   z-index: 1;
-  .order{
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    padding-top: 0;
+  }
+  .order {
     display: flex;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    @include font(26px,$font-color-1,400,$font-regular);
+    @include font(26px, $font-color-1, 400, $font-regular);
     flex-basis: 100%;
     background-color: $color-btn-1;
     justify-content: center;
     margin: 0;
     height: 40px;
     line-height: 40px;
+    @media screen and (max-width: 769px) {
+      font-size: 24px;
+    }
     &::after {
       content: '';
       display: block;
@@ -128,7 +141,7 @@
       border-width: 45px 55px 0px 0px;
       border-color: $color-btn-1 transparent transparent transparent;
     }
-    &:hover{
+    &:hover {
       -webkit-animation-name: pulse;
       animation-name: pulse;
       animation-duration: 0.5s;
@@ -139,7 +152,7 @@
   }
 }
 
-.btn_read_more{
+.btn_read_more {
   display: inline-block;
   text-align: center;
   margin: 0 auto;
@@ -148,21 +161,21 @@
   line-height: 35px;
   text-transform: uppercase;
   background-color: $color-third;
-  .read_more{
-    @include font(16px,$font-color-1,400,$font-regular);
+  .read_more {
+    @include font(16px, $font-color-1, 400, $font-regular);
     text-decoration: none;
-    &::after{
-      @include font(16px,$font-color-1,400,$font-awesome);
+    &::after {
+      @include font(16px, $font-color-1, 400, $font-awesome);
       content: '\f101';
       padding-left: 5px;
     }
   }
-  &:hover{
+  &:hover {
     background-color: $color-btn-4;
   }
 }
 
-.btn-smaler{
+.btn-smaler {
   display: inline-block;
   width: 95px;
   border-radius: 4px;
@@ -172,19 +185,19 @@
   background-color: $color-btn-3;
   text-transform: uppercase;
   padding: 8px 0;
-  i{
+  i {
     float: left;
     padding: 2px 10px 0 10px;
     font-size: 14px;
   }
-  &:hover{
+  &:hover {
     background-color: $color-btn-2-hover;
     text-decoration: none;
     color: #fff;
   }
 }
 
-.btn-live-chat{
+.btn-live-chat {
   display: inline-block;
   width: 120px;
   border-radius: 5px;
@@ -196,19 +209,20 @@
   text-align: center;
   padding: 8px 0px;
 
-  i{
+  i {
     color: $color-primary;
     float: left;
     padding: 2px 0 0 10px;
 
   }
-  &:hover{
+  &:hover {
     background-color: $color-btn-2-hover;
     color: $color-primary;
     text-decoration: none;
   }
 }
-.btn-transparent{
+
+.btn-transparent {
   width: 130px;
   display: inline-block;
   border-radius: 5px;
@@ -219,12 +233,12 @@
   font-weight: 400;
   font-family: $font-regular;
   padding: 7px 0 8px;
-  i{
+  i {
     margin: 0 4px 0 10px;
     font-size: 13px;
     font-weight: 400;
   }
-  &:hover{
+  &:hover {
     background-color: $color-btn-2-hover;
     color: $color-primary;
     text-decoration: none;
