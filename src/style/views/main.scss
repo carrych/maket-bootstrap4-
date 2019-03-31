@@ -5,7 +5,6 @@
     @media screen and (max-width: 769px) {
       padding: 0;
     }
-
   }
   .head {
     background: url(../../img/Layer-gray.svg) center no-repeat;
@@ -925,8 +924,9 @@
               border-bottom: 34px solid transparent;
               border-left: 25px solid $color-third;
               position: absolute;
-              right: 37.8%;
+              right: -3.8%;
               @media screen and (max-width: 575px) {
+                right: 45%;
                 bottom: -52px;
                 border-top: 20px solid $color-third;
                 border-right: 30px solid transparent;
@@ -1033,75 +1033,6 @@
       display: flex;
       margin: 20px;
       justify-content: space-around;
-    }
-  }
-
-  .cards_plus_socials_bg {
-    background-color: $color-third-6;
-    height: 70px;
-    z-index: 1;
-    position: relative;
-    .cards_and_social {
-      display: flex;
-      justify-content: space-between;
-      @media screen and (max-width: 575px) {
-        justify-content: center;
-      }
-      a {
-        padding-top: 10px;
-        .debit_cards {
-          display: inline-block;
-          background: url(../../img/Debit_Dark.svg) left no-repeat;
-          width: 610px;
-          height: 50px;
-          line-height: 70px;
-          @media screen and (max-width: 575px) {
-            display: none;
-          }
-        }
-      }
-      .social {
-        display: inline-block;
-        margin-top: 5px;
-        .socialFace, .socialTwit, .socialPint {
-          position: relative;
-          display: inline-block;
-          text-align: center;
-          height: 60px;
-          width: 60px;
-          &::after {
-            @include font(40px, $font-color-1, 400, $font-awesome);
-            content: '';
-            position: absolute;
-            left: 10px;
-            bottom: -10px;
-            line-height: 70px;
-            color: $font-color-3;
-            transition: all 0.3s ease;
-          }
-          &:hover {
-            border: 4px solid $font-color-1;
-            border-radius: 50%;
-            background-color: $color-secondary;
-            &::after {
-              color: $font-color-6;
-            }
-          }
-        }
-        .socialFace {
-          &::after {
-            left: 15px;
-            content: '\f09a';
-          }
-        }
-        .socialTwit::after {
-          content: '\f099';
-        }
-        .socialPint::after {
-          left: 15px;
-          content: '\f231';
-        }
-      }
     }
   }
 }
