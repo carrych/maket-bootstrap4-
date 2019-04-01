@@ -1,0 +1,182 @@
+@import "../partials/fonts";
+
+.head_top {
+  background: url(../../img/Layer-gray.svg) center no-repeat;
+  height: 470px;
+  background-size: cover;
+  z-index: 1;
+  @media screen and (max-width: 769px) {
+    background-color: $color-primary-1;
+    height: 560px;
+  }
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
+  .bg_girl {
+    background: url(../../img/Layer-girl.svg) center no-repeat;
+    background-size: contain;
+    width: 98.8%;
+    height: 470px;
+    position: absolute;
+    @media screen and (max-width: 769px) {
+      background: url(../../img/Bg_elem1.svg) center no-repeat;
+      background-size: cover;
+      height: 250px;
+      width: 100%;
+      left: 0;
+    }
+  }
+  .logo {
+    display: flex;
+    margin: 22px 0 20px 0;
+    background: url(../../img/Logo.svg) center no-repeat;
+    background-size: contain;
+    height: 82px;
+    flex-basis: 92%;
+  }
+  .main_title {
+    display: flex;
+    flex-basis: 92%;
+    background-color: $font-color-2;
+    justify-content: center;
+    box-shadow: 2px 4px 7px rgba(155, 182, 190, 0.75);
+    padding: 0 50px 0 35px;
+    margin: 0;
+    height: 64px;
+    @include font(32px, $font-color-3, 700, $font-bold);
+    line-height: 64px;
+    @media screen and (max-width: 1199px) {
+      flex-basis: 100%;
+      padding: 0 0 0 20px;
+    }
+    @media screen and (max-width: 769px) {
+      font-size: 24px;
+      margin-top: 20px;
+      height: 57px;
+      line-height: 24px;
+      align-items: center;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -30px;
+      left: 15px;
+      border-style: solid;
+      border-width: 45px 55px 0px 0px;
+      border-color: #caddea transparent transparent transparent;
+      @media screen and (max-width: 769px) {
+        border-width: 35px 45px 0px 0px;
+      }
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 33px;
+      bottom: -30px;
+      box-shadow: 4px 4px 6px #9bb6be;
+      width: 4px;
+      height: 44px;
+      transform: rotate(50deg);
+    }
+  }
+
+  .offer {
+    display: flex;
+    flex-basis: 100%;
+    margin-top: 47px;
+    flex-direction: column;
+    @media screen and (max-width: 769px) {
+      margin-top: 24px;
+    }
+    .offer_title {
+      padding-left: 66px;
+      @include font(21px, $font-color-4, 500, $font-medium);
+      margin: 0;
+      @media screen and (max-width: 769px) {
+        font-size: 18px;
+      }
+    }
+    .offer_items {
+      padding-left: 60px;
+      margin: 0;
+      @media screen and (max-width: 575px) {
+        padding-left: 25px;
+      }
+      .offer_item {
+        color: $font-color-3;
+        line-height: 30px;
+        @media screen and (max-width: 769px) {
+          line-height: 28px;
+        }
+        @media screen and (max-width: 575px) {
+          line-height: 20px;
+        }
+        span {
+          @include font(18px, $font-color-4, 400, $font-arial);
+          @media screen and (max-width: 769px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.head_down {
+  background: url(../../img/bg_obj.svg) center no-repeat;
+  height: 110px;
+  width: 100%;
+  @media screen and (max-width: 575px) {
+    display: flex;
+    background: inherit;
+    background-color: $color-secondary;
+    align-items: center;
+    height: 75px;
+  }
+  .btns_order_and_group {
+    display: flex;
+    flex-basis: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (max-width: 575px) {
+      justify-content: space-around;
+    }
+    .block {
+      @media screen and (max-width: 575px) {
+        display: none;
+      }
+      .group_of_btns {
+        display: flex;
+        flex-basis: 90%;
+        justify-content: space-between;
+        margin-top: 14px;
+        margin-left: 50px;
+        @media screen and (max-width: 769px) {
+          flex-basis: 100%;
+          height: 90px;
+          margin-top: 0;
+          margin-left: 0;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .change_color {
+          color: $font-color-1;
+          border-color: $color-third-1;
+        }
+      }
+      .btn_item {
+        .order {
+          @media screen and (max-width: 575px) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

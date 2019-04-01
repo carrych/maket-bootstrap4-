@@ -1,0 +1,102 @@
+@import "../partials/fonts";
+
+.content404 {
+  .bg404 {
+    height: 905px;
+    background-color: $color-primary;
+    .bg_img {
+      background: url(../../img/Bg404.svg) center no-repeat;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 376px;
+      left: 0;
+    }
+
+    .logo {
+      display: flex;
+      margin: 72px 0 70px 0;
+      background: url(../../img/Logo2.svg) center no-repeat;
+      background-size: contain;
+      height: 82px;
+      flex-basis: 100%;
+    }
+
+    .bg_bullet1 {
+      display: block;
+      position: absolute;
+      background: url(../../img/bullet_1.svg) center no-repeat;
+      background-size: contain;
+      height: 404px;
+      width: 100%;
+      top: 20px;
+      right: -10%;
+    }
+
+    .text {
+      width: 100%;
+      text-align: right;
+      align-items: center;
+      height: 20px;
+      @include font(60px, $font-color-9, 300, $font-thin);
+      .bold_font {
+        @include font(65px, $font-color-9, 400, $font-regular);
+      }
+    }
+
+    .bg_bullet2 {
+      display: block;
+      position: absolute;
+      background: url(../../img/bullet_2.svg) center no-repeat;
+      background-size: contain;
+      height: 542px;
+      width: 75%;
+      top: 0;
+      left: -55%;
+    }
+
+    .number404{
+      display: flex;
+      justify-content: center;
+      @include font(350px, $font-color-10, 500, $font-medium);
+      height: 256px;
+      padding-top: 150px;
+      margin-bottom: 87px;
+      align-items: center;
+      text-shadow:
+              -0   -2px 0   #4597D9,
+              0   -2px 0   #4597D9,
+              -0    2px 0   #4597D9,
+              0    2px 0   #4597D9,
+              -2px -0   0   #4597D9,
+              2px -0   0   #4597D9,
+              -2px  0   0   #4597D9,
+              2px  0   0   #4597D9,
+              -1px -2px 0   #4597D9,
+              1px -2px 0   #4597D9,
+              -1px  2px 0   #4597D9,
+              1px  2px 0   #4597D9,
+              -2px -1px 0   #4597D9,
+              2px -1px 0   #4597D9,
+              -2px  1px 0   #4597D9,
+              2px  1px 0   #4597D9,
+              -2px -2px 0   #4597D9,
+              2px -2px 0   #4597D9,
+              -2px  2px 0   #4597D9,
+              2px  2px 0   #4597D9,
+              -2px -2px 0   #4597D9,
+              2px -2px 0   #4597D9,
+              -2px  2px 0   #4597D9,
+              2px  2px 0   #4597D9;
+    }
+
+    .GoBack_Homepage_btns{
+      display: flex;
+      height: 277px;
+      flex-basis: 100%;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
