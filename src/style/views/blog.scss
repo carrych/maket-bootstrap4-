@@ -196,12 +196,6 @@
             flex-basis: 40%;
             justify-content: left;
             padding-left: 10px;
-            &::after {
-              @include font(22px, $font-color-1, 400, $font-awesome);
-              content: '\f054';
-              padding-left: 10px;
-              display: block;
-            }
           }
           @media screen and (max-width: 769px) {
             font-size: 20px;
@@ -215,6 +209,14 @@
             border-style: solid;
             border-width: 25px 35px 0px 0px;
             border-color: $color-secondary transparent transparent transparent;
+          }
+        }
+        .subtitle2{
+          &::after {
+            @include font(22px, $font-color-1, 400, $font-awesome);
+            content: '\f054';
+            padding-left: 10px;
+            display: block;
           }
         }
         @media screen and (max-width: 1199px) {
