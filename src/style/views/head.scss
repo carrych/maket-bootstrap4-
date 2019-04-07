@@ -41,7 +41,7 @@
       right: 3%;
       z-index: 2;
     }
-    span {
+    .Toll {
       @include font(20px, $font-color-2, 400, $font-thin);
       a {
         @include font(20px, $font-color-2, 400, $font-regular);

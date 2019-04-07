@@ -1,0 +1,558 @@
+@import "../partials/fonts";
+
+.about_us {
+  .main_content_head {
+    background-color: $color-primary-1;
+  }
+  .title {
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    background-color: $font-color-2;
+    justify-content: center;
+    box-shadow: 2px 4px 7px rgba(155, 182, 190, 0.75);
+    margin: 40px 0 0 0;
+    height: 50px;
+    @include font(28px, $font-color-3, 700, $font-bold);
+    line-height: 50px;
+    @media screen and (max-width: 575px) {
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      border-style: solid;
+      border-width: 45px 55px 0px 0px;
+      border-color: #caddea transparent transparent transparent;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 20px;
+      bottom: -30px;
+      box-shadow: 4px 4px 6px #9bb6be;
+      width: 4px;
+      height: 44px;
+      transform: rotate(50deg);
+    }
+  }
+  .info {
+    display: flex;
+    height: auto;
+    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    .subtitle {
+      @include font(22px, $font-color-3, 500, $font-regular);
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0;
+      @media screen and (max-width: 575px) {
+        font-size: 18px;
+      }
+    }
+    .text {
+      @include font(18px, $font-color-4, 400, $font-arial);
+      margin: 25px 0;
+      text-align: justify;
+    }
+    .first, .second {
+      margin: 25px 0 0 0;
+    }
+
+    .list_items {
+      padding: 0 0 0 20px;
+      margin: 0;
+      .list_item {
+        @include font(18px, $font-color-3, 700, $font-arial);
+        p {
+          @include font(18px, $font-color-4, 400, $font-arial);
+          text-align: justify;
+          position: relative;
+          left: -2%;
+        }
+      }
+    }
+  }
+
+  .main_content_subhead {
+    background: url(../../img/bg_about_us.svg) center no-repeat;
+    width: 100%;
+    height: 358px;
+    background-size: cover;
+    .title {
+      margin: 30px 0 0 0;
+    }
+  }
+  .main_content {
+    position: relative;
+    padding-bottom: 60px;
+    background-color: $color-primary-1;
+    .last_post {
+      position: relative;
+      width: 60%;
+      height: auto;
+      padding: 15px 20px;
+      background-color: $color-third-1;
+      box-shadow: 2px 4px 7px rgba(167, 192, 200, 0.75);
+      margin: 20px auto 0;
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        border-style: solid;
+        border-width: 15px 35px 0px 0px;
+        border-color: $color-third-1 transparent transparent transparent;
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 17px;
+        bottom: -18px;
+        box-shadow: 4px 4px 6px #9bb6be;
+        width: 4px;
+        height: 30px;
+        transform: rotate(63deg);
+      }
+      .subtitle {
+        @include font(22px, $font-color-3, 500, $font-regular);
+        text-align: left;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .items {
+        display: flex;
+        flex-basis: 100%;
+        padding-left: 20px;
+        margin: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        .item {
+          color: $font-color-3;
+          line-height: 30px;
+          span {
+            @include font(16px, $font-color-4, 400, $font-regular);
+          }
+        }
+      }
+    }
+    .full_width {
+      .subtitle {
+        margin-bottom: 10px;
+      }
+      width: 100%;
+      .text {
+        text-align: justify;
+      }
+    }
+    .place_for_banner1, .place_for_banner2 {
+      background: url(../../img/bg_about_us.svg) center no-repeat;
+      @include font(40px, $font-color-1, 400, $font-regular);
+      text-align: center;
+      align-items: center;
+      width: 70%;
+      margin: 40px auto 0;
+      background-size: cover;
+      @media screen and (max-width: 575px) {
+        width: 100%;
+        margin: 30px auto 0;
+      }
+
+    }
+
+    .place_for_banner1 {
+      height: 200px;
+      line-height: 200px;
+    }
+
+    .place_for_banner2 {
+      height: 100px;
+      line-height: 100px;
+      width: 95%;
+      margin: 35px auto 75px;
+      @media screen and (max-width: 575px) {
+        margin: 20px auto 30px;
+      }
+    }
+
+    h3 {
+      margin: 30px 0 0;
+      font-size: 22px;
+      .arrow_before {
+        &::before {
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f054';
+        }
+      }
+    }
+
+    .last {
+      margin-bottom: 70px;
+    }
+    .subinfo {
+      @include font(18px, $font-color-4, 400, $font-arial);
+      width: 80%;
+      margin: 20px auto 10px;
+    }
+
+    .table_and_form {
+      display: flex;
+      width: 80%;
+      margin: 0 auto 30px;
+      flex-direction: column;
+      justify-content: end;
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
+      .default_form {
+        background-color: $color-secondary;
+        padding-bottom: 10px;
+      }
+      .table {
+        width: 100%;
+        box-shadow: 2px 4px 7px rgba(155, 182, 190, 0.75);
+        background-color: $color-third-1;
+        padding: 0 15px 10px;
+        table {
+          width: 100%;
+          tr {
+            .hidden_mobile {
+              @media screen and (max-width: 575px) {
+                display: none;
+              }
+            }
+            .first_th {
+              width: 15%;
+            }
+            .second {
+              width: 12%;
+            }
+            .first_td {
+              text-align: right;
+              @include font(15px, $font-color-6, 400, $font-regular);
+              line-height: 27px;
+              text-transform: none;
+            }
+            th {
+              @include font(15px, $font-color-6, 500, $font-regular);
+              text-transform: uppercase;
+              text-align: center;
+              line-height: 15px;
+            }
+            td {
+              @include font(15px, $font-color-3, 400, $font-regular);
+              text-transform: uppercase;
+              line-height: 27px;
+              padding: 0;
+              text-align: center;
+            }
+          }
+        }
+        .last {
+          border-bottom: 1px solid #dee2e6;
+        }
+      }
+    }
+
+    .subinfo1 {
+      margin-top: 20px;
+    }
+
+    .contact_us {
+      background: url(../../img/bg_about_us1.svg) center no-repeat;
+      background-size: cover;
+      display: flex;
+      height: 110px;
+      flex-basis: 80%;
+      margin: 25px auto 5px;
+      flex-direction: row;
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
+      .support_and_sale {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+        text-align: right;
+        margin: auto;
+        .Toll {
+          @include font(20px, $font-color-2, 400, $font-thin);
+          a {
+            @include font(20px, $font-color-2, 400, $font-regular);
+            @media screen and (max-width: 769px) {
+              font-size: 17px;
+            }
+          }
+          @media screen and (max-width: 769px) {
+            font-size: 17px;
+          }
+        }
+      }
+      .chat_btn {
+        width: 40%;
+        margin: auto;
+        .liveChat {
+          position: relative;
+          display: block;
+          text-align: center;
+          margin: auto;
+          height: 85px;
+          width: 180px;
+          border: 1px solid $color-third-1;
+          @include font(22px, $font-color-1, 400, $font-regular);
+          text-decoration: none;
+          text-transform: uppercase;
+          line-height: 100px;
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background: url(../../img/Chat.svg) no-repeat;
+            background-size: contain;
+            top: 5%;
+            left: 35%;
+          }
+        }
+      }
+    }
+
+    .contact_form {
+      display: block;
+      height: 410px;
+      width: 80%;
+      margin: 0 auto 55px;
+      background-color: $color-third-1;
+      box-shadow: 2px 4px 7px rgba(167, 192, 200, 0.75);
+      @media screen and (max-width: 575px) {
+        height: 480px;
+        width: 100%;
+      }
+      .title {
+        width: 100%;
+        @include font(22px, $font-color-1, 400, $font-regular);
+        line-height: 40px;
+        background-color: $color-secondary;
+        margin: 0 0 10px;
+        box-shadow: none;
+        @media screen and (max-width: 575px) {
+          font-size: 20px;
+        }
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+
+      .part1, .part2, .part3 {
+        width: 95%;
+        margin: 0 auto 25px;
+        @media screen and (max-width: 575px) {
+          margin: 0 auto 15px;
+        }
+        label {
+          @include font(15px, $color-primary, 500, $font-regular);
+        }
+      }
+
+      .part1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: auto auto 20px 45px;
+        .subject {
+          padding: 5px 12px;
+          width: 95%;
+          height: 30px;
+          @include font(15px, $color-primary, 400, $font-regular);
+          font-style: normal;
+          border-style: none;
+          background-color: $color-third-3;
+          @media screen and (max-width: 575px) {
+            width: 100%;
+            margin: 0 auto 15px;
+          }
+        }
+      }
+
+      .part2 {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        .group_of_inputs {
+          display: flex;
+          flex-basis: 45%;
+          flex-direction: column;
+          justify-content: space-between;
+          height: auto;
+          .name, .order, .email {
+            padding: 5px 12px;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 5px;
+            @include font(15px, $color-primary, 400, $font-regular);
+            font-style: normal;
+            border-style: none;
+            background-color: $color-third-3;
+          }
+        }
+        .comment_text {
+          display: flex;
+          flex-basis: 45%;
+          flex-direction: column;
+          justify-content: left;
+          height: auto;
+          .comment {
+            padding: 5px 12px;
+            width: 100%;
+            height: 180px;
+            margin-bottom: 5px;
+            @include font(15px, $color-primary, 400, $font-regular);
+            font-style: normal;
+            border-style: none;
+            background-color: $color-third-3;
+          }
+        }
+
+      }
+
+      .part3 {
+        width: 90%;
+        .btn_read_more {
+          margin: 0 0 0 auto;
+          @media screen and (max-width: 575px) {
+            margin: 0 auto;
+          }
+          .read_more {
+            &::after {
+              display: none;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .table2 {
+      width: 80%;
+      margin: 0 auto 60px;
+      box-shadow: 2px 4px 7px rgba(155, 182, 190, 0.75);
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
+      tr {
+        th {
+          @include font(20px, $font-color-1, 500, $font-regular);
+          background-color: $color-secondary;
+          border: 1px solid $color-third-1;
+          text-align: center;
+        }
+        td {
+          background-color: #e3f3fb;
+          @include font(16px, $font-color-4, 400, $font-regular);
+          border: 1px solid $color-third-1;
+          text-align: center;
+        }
+        .hidden_on_mobile {
+          @media screen and (max-width: 575px) {
+            display: none;
+          }
+        }
+      }
+      .light_blue {
+        td {
+          background-color: #f0f8fd;
+        }
+      }
+    }
+
+    .last_title {
+      @include font(24px, $font-color-3, 500, $font-regular);
+      margin: 0 auto 5px;
+      text-transform: uppercase;
+      line-height: 24px;
+    }
+
+    .our_customers_comments{
+      display: flex;
+      flex-basis: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .last_post{
+        width: 47%;
+        text-align: center;
+      }
+      .hidden_on_mobile{
+        @media screen and (max-width: 575px) {
+          display: none;
+        }
+      }
+    }
+
+    .name_of_our_customers{
+      display: flex;
+      flex-basis: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      .text{
+        width: 47%;
+        text-align: left;
+        margin: auto;
+        @include font(18px,$font-color-4, 700, $font-regular);
+        @media screen and (max-width: 575px) {
+          width: 100%;
+        }
+        &::after{
+          @include font(18px, $color-star, 400, $font-awesome);
+          content: '\f005 \f005 \f005 \f005 \f005';
+          margin-left: 7px;
+        }
+      }
+      .hidden_on_mobile{
+        @media screen and (max-width: 575px) {
+          display: none;
+        }
+      }
+    }
+
+    ul.pagination {
+      display: inline-block;
+      padding: 0 0 0 3%;
+      margin: auto;
+    }
+
+    ul.pagination li {
+      display: inline;
+    }
+
+    ul.pagination li a {
+      @include font(22px, $font-color-3, 400, $font-awesome);
+      float: left;
+      text-decoration: none;
+      transition: background-color .3s;
+      margin: 0 4px;
+    }
+
+    ul.pagination li a.active {
+      color: $font-color-6;
+    }
+
+  }
+}
