@@ -292,6 +292,7 @@
           }
           &:hover {
             background-color: $color-btn-2-hover;
+            padding-bottom: 9px;
             text-decoration: none;
             &::after {
               content: "I";
@@ -300,7 +301,12 @@
             &::before{
               content: '';
               position: absolute;
-              z-index:1;
+              left: -10px;
+              top: 0;
+              z-index: 1;
+              height: 43px;
+              width: 10px;
+              background-color: $color-btn-2-hover;
             }
           }
         }

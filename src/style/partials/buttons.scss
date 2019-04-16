@@ -107,7 +107,15 @@
     }
   }
 }
-
+.mini_btns{
+  width:9% ;
+  a{
+    @include font(18px, $font-color-1, 400, $font-regular);
+    border-radius: 15px;
+    background-color: $color-btn-3;
+    text-align: center;
+  }
+}
 .btn_item {
   width: 33.33%;
   padding: 20px 15px;

@@ -1,0 +1,434 @@
+@import "../partials/fonts";
+
+.order_now {
+  .main_content {
+    height: auto;
+    background-color: $color-primary-1;
+    width: 100%;
+    @media screen and (max-width: 575px) {
+      padding: 15px 0 30px;
+    }
+    .title {
+      position: relative;
+      display: flex;
+      flex-basis: 100%;
+      background-color: $font-color-2;
+      justify-content: center;
+      box-shadow: 2px 4px 7px rgba(155, 182, 190, 0.75);
+      margin: 40px 0 0 0;
+      height: 50px;
+      @include font(28px, $font-color-3, 700, $font-bold);
+      line-height: 50px;
+      @media screen and (max-width: 575px) {
+      }
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        border-style: solid;
+        border-width: 45px 55px 0px 0px;
+        border-color: #caddea transparent transparent transparent;
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 20px;
+        bottom: -30px;
+        box-shadow: 4px 4px 6px #9bb6be;
+        width: 4px;
+        height: 44px;
+        transform: rotate(50deg);
+      }
+    }
+
+    .contact_form {
+      width: 80%;
+      margin: 30px auto 35px;
+      box-shadow: 2px 4px 7px rgba(167, 192, 200, 0.75);
+      .title {
+        width: 100%;
+        @include font(22px, $font-color-1, 400, $font-regular);
+        line-height: 40px;
+        background-color: $color-secondary;
+        margin: 0 0 10px;
+        box-shadow: none;
+        @media screen and (max-width: 575px) {
+          font-size: 20px;
+        }
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+
+      .part1, .part2 {
+        width: 95%;
+        margin: 0 auto 25px;
+        @media screen and (max-width: 575px) {
+          margin: 0 auto 15px;
+        }
+        label {
+          @include font(15px, $color-primary, 500, $font-regular);
+        }
+      }
+
+      .part1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: auto auto 0 45px;
+        .name, .email, .telephone {
+          padding: 5px 12px;
+          width: 95%;
+          height: 30px;
+          margin-bottom: 10px;
+          @include font(15px, $color-primary, 400, $font-regular);
+          font-style: normal;
+          border-style: none;
+          background-color: $color-third-3;
+          @media screen and (max-width: 575px) {
+            width: 100%;
+            margin: 0 auto 15px;
+          }
+        }
+        #Email, #agree {
+          margin: 0 5px 5px 0;
+        }
+        .no_marg {
+          margin: 0;
+        }
+        .one_line {
+          display: flex;
+          flex-basis: 100%;
+          justify-content: left;
+          flex-direction: row;
+          label {
+            @include font(14px, $color-primary, 500, $font-regular);
+          }
+        }
+        .with_after_el {
+          &::after {
+            content: ' *';
+            color: $font-color-7;
+          }
+        }
+        .default_form {
+          flex-direction: column;
+          justify-content: left;
+          .order_item {
+            width: 95%;
+            padding: 5px 0;
+            label {
+              text-transform: none;
+            }
+            select {
+              background-color: $color-third-3;
+            }
+          }
+        }
+      }
+
+      .part2 {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        .order_item {
+          width: 99%;
+          margin: auto;
+          label {
+            text-transform: none;
+          }
+          select {
+            background-color: $color-third-3;
+          }
+        }
+        .comment_lbl {
+          margin-left: 20px;
+        }
+        .comment {
+          padding: 24px 12px;
+          width: 95%;
+          margin: auto;
+          height: 185px;
+          @include font(15px, $color-primary, 400, $font-regular);
+          font-style: normal;
+          border-style: none;
+          background-color: $color-third-3;
+          @media screen and (max-width: 575px) {
+            height: 180px;
+          }
+        }
+        .radio_btns {
+          display: flex;
+          margin: 20px 0 10px 20px;
+          flex-direction: row;
+          justify-content: left;
+          input {
+            margin: 0 5px 0;
+          }
+        }
+        .one_line {
+          display: flex;
+          flex-basis: 100%;
+          justify-content: left;
+          flex-direction: row;
+          span {
+            font-weight: 800;
+          }
+          input {
+            margin: 0 5px 0 25px;
+          }
+          label {
+            @include font(14px, $color-primary, 500, $font-regular);
+            margin: 0;
+          }
+        }
+      }
+
+      .part3 {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-around;
+        .last_inputs {
+          display: flex;
+          flex-basis: 88%;
+          flex-direction: row;
+          @media screen and (max-width: 575px) {
+            flex-direction: column;
+            flex-basis: 100%;
+          }
+          justify-content: space-between;
+          .discount_code, .id {
+            display: flex;
+            flex-basis: 48%;
+            flex-direction: column;
+            justify-content: left;
+            @media screen and (max-width: 575px) {
+              flex-basis: 100%;
+            }
+            label {
+              @include font(15px, $color-primary, 500, $font-regular);
+            }
+            .name {
+              padding: 5px 12px;
+              width: 100%;
+              height: 30px;
+              margin-bottom: 10px;
+              @include font(15px, $color-primary, 400, $font-regular);
+              font-style: normal;
+              border-style: none;
+              background-color: $color-third-3;
+              @media screen and (max-width: 575px) {
+                margin: 0 auto 15px;
+              }
+            }
+            .btn_item {
+              width: 50%;
+              margin: auto;
+              padding: 0 15px 20px;
+              @media screen and (max-width: 575px) {
+                width: 90%
+              }
+              .order {
+                @include font(20px, $font-color-1, 700, $font-regular);
+                background-color: $color-secondary;
+                text-transform: none;
+                &::after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  bottom: -15px;
+                  left: 0;
+                  border-style: solid;
+                  border-width: 15px 25px 0px 0px;
+                  border-color: $color-btn-3 transparent transparent transparent;
+                }
+              }
+              .upper {
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+
+      .red_text {
+        display: inline-block;
+        position: relative;
+        width: 85%;
+        margin: 15px auto 20px 90px;
+        @include font(15px, $font-color-7, 400, $font-regular);
+        &::before {
+          @include font(21px, $font-color-7, 700, $font-awesome);
+          content: '\f00d';
+          display: inline-block;
+          padding: 10px 0;
+          position: absolute;
+          left: -2.5%;
+        }
+      }
+
+      .accept {
+        text-align: center;
+        margin: auto;
+        font-weight: 700;
+        span {
+          color: $font-color-7;
+        }
+      }
+    }
+
+    .vip {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-basis: 80%;
+      height: auto;
+      margin: auto;
+      padding: 10px 25px 28px;
+      background: url(../../img/VectorVip.svg) center no-repeat;
+      background-size: cover;
+      .title {
+        width: 100%;
+        @include font(22px, $font-color-1, 400, $font-regular);
+        line-height: 40px;
+        background-color: unset;
+        margin: 0 0 10px;
+        box-shadow: none;
+        @media screen and (max-width: 575px) {
+          font-size: 20px;
+        }
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+      .vip_part {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: $color-third-1;
+        box-shadow: 2px 4px 7px rgba(167, 192, 200, 0.75);
+        height: auto;
+        flex-basis: 100%;
+        padding: 25px 80px 25px 45px;
+        .img {
+          background: url(../../img/VIP.svg) center no-repeat;
+          width: 20%;
+          height: 120px;
+          background-size: contain;
+        }
+        .text {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          flex-basis: 50%;
+          span {
+            @include font(18px, $font-color-4, 500, $font-regular);
+            line-height: 35px;
+          }
+        }
+        .dollars {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          flex-basis: 17%;
+          span {
+            @include font(18px, $font-color-4, 700, $font-regular);
+            line-height: 35px;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            &::before {
+              @include font(20px, $font-color-3, 800, $font-arial);
+              position: absolute;
+              line-height: 30px;
+              content: '?';
+              padding: 0 12px;
+              background-color: $color-third-6;
+              border: 1px red;
+              border-radius: 50%;
+              left: -40%;
+            }
+          }
+        }
+        .mini_btns {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          a {
+            text-decoration: none;
+            &:hover {
+              background-color: $color-third-1;
+              border: 1px solid $color-secondary;
+            }
+          }
+        }
+      }
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-basis: 80%;
+      height: auto;
+      margin: 0 auto 60px;
+      padding: 25px 35px;
+      background-color: $color-third-1;
+      box-shadow: 2px 4px 7px rgba(167, 192, 200, 0.75);
+      .default_form {
+        flex-basis: 20%;
+        .order_item {
+          width: 100%;
+          margin: auto;
+          &::after {
+            right: 25px;
+            top: 10px;
+          }
+          select {
+            background-color: $color-third-3;
+            font-weight: 700;
+          }
+        }
+      }
+      .text_and_number {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-basis: 40%;
+        .text1 {
+          @include font(22px, $font-color-4, 400, $font-regular);
+          text-transform: uppercase;
+          line-height: 90px;
+        }
+        .number{
+          @include font(50px, $font-color-3, 700, $font-regular);
+          line-height: 70px;
+          .usd{
+            @include font(30px, $font-color-3, 700, $font-regular);
+            text-transform: uppercase;
+            line-height: 70px;
+          }
+        }
+      }
+      .btn_item{
+        width: 40%;
+        .order{
+          &::after{
+            border-width: 25px 35px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

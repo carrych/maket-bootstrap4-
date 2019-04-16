@@ -1,0 +1,224 @@
+@import "../partials/fonts";
+
+.home_content {
+  .bg {
+    background-color: $color-primary-1;
+    .home_nav {
+      flex-basis: 100%;
+      height: 50px;
+      background-color: $color-third-6;
+      margin-top: 45px;
+      .welcome_user {
+        display: flex;
+        flex-basis: 20%;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-third;
+        p{
+          @include font(20px, $font-color-1, 400, $font-regular);
+          margin: 0;
+        }
+      }
+
+      .nav{
+        display: flex;
+        flex-basis: 60%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        .items{
+          display: flex;
+          flex-basis: 100%;
+          justify-content: space-between;
+          padding: 0;
+          margin: 0;
+          .item{
+            display: inline-block;
+            text-transform: uppercase;
+            position: relative;
+            a{
+              text-decoration: none;
+              padding: 3px 10px;
+            @include font(18px, $color-third, 500, $font-regular);
+              &::after {
+                content: "I";
+                padding-left: 18px;
+                color: $color-third;
+              }
+              &:hover {
+                color: $font-color-1;
+                background-color: $color-third;
+                &::after {
+                  content: "I";
+                  color: transparent;
+                }
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: -22px;
+                  top: -1px;
+                  z-index: 1;
+                  height: 29px;
+                  width: 22px;
+                  background-color: $color-third;
+                }
+              }
+            }
+          }
+          .item:last-child {
+            a {
+              &::after {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .home_info{
+      flex-basis: 100%;
+      border-bottom: 1px solid $color-third;
+      padding:10px;
+      margin-bottom: 45px;
+      .bold{
+        @include font(20px, $font-color-6, 700, $font-arial);
+        span, a{
+          @include font(20px, $font-color-6, 400, $font-arial);
+        }
+        .text3{
+          color: $font-color-3;
+        }
+        .text2{
+          &::after{
+            @include font(20px, $font-color-3, 400, $font-awesome);
+            content: '\f0e0';
+            padding-left: 5px;
+          }
+        }
+      }
+
+      span{
+        @include font(20px, $font-color-6, 400, $font-arial);
+        a{
+          @include font(20px, $font-color-6, 400, $font-arial);
+          text-decoration: none;
+        }
+      }
+
+      .item1{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f05a';
+          padding-right: 5px;
+        }
+      }
+      .item2{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f15c';
+          padding-right: 5px;
+        }
+      }
+      .item3{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f0e0';
+          padding-right: 5px;
+        }
+      }
+      .item4{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f1d8';
+          padding-right: 5px;
+        }
+      }
+      .item6{
+        a {
+          color: $font-color-7;
+          &::before {
+            @include font(20px, $font-color-7, 400, $font-awesome);
+            content: '\f00d';
+            padding-right: 5px;
+          }
+        }
+      }
+      .item5-1{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f0e2';
+          padding-right: 5px;
+        }
+      }
+      .item6-1{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f075';
+          padding-right: 5px;
+        }
+      }
+      .item7{
+        &::before{
+          @include font(20px, $font-color-3, 400, $font-awesome);
+          content: '\f044';
+          padding-right: 5px;
+        }
+      }
+      .item8{
+        width: 35%;
+      }
+    }
+
+    .table_title{
+      @include font(22px, $font-color-1, 500, $font-regular);
+      text-transform: uppercase;
+      padding-left: 15px;
+      height: 45px;
+      flex-basis: 100%;
+      background-color: $color-secondary;
+      margin: 0;
+    }
+
+    .home_table{
+      width: 100%;
+      background-color: $color-third-1;
+      tbody{
+        width: 100%;
+      }
+      tr{
+        width: 100%;
+        .stars{
+          &::before{
+            @include font(20px, $font-color-3, 400, $font-awesome);
+            content: '\f005 \f005 \f005 \f005 \f005';
+          }
+        }
+        th,td{
+          text-align: center;
+          align-items: center;
+          @include font(20px, $font-color-6, 700, $font-arial);
+          border: 3px solid $color-third-6;
+        }
+        td{
+          font-weight: 400;
+          span{
+            color:$font-color-3;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .table1{
+      margin-bottom: 45px;
+    }
+    .table3{
+      margin-top: 2px;
+    }
+    .no_border{
+      border: none;
+      margin-bottom: 45px;
+    }
+  }
+}
