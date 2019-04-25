@@ -1,0 +1,107 @@
+@import "../partials/fonts";
+
+.home_content {
+  .bg {
+    .page_details {
+      margin-bottom: 20px;
+    }
+    .details_content{
+      flex-basis: 100%;
+     margin-bottom: 35px;
+      .part1,.part2{
+        flex-basis: 50%;
+        @include font(20px, $font-color-6, 700, $font-arial);
+        text-align: right;
+        border: 1px solid $color-third-6;
+        margin: 1px;
+        background-color: $color-third-1;
+        padding: 20px 70px 20px 275px;
+        .items{
+          padding: 0;
+          margin: 0;
+          .item{
+            list-style: none;
+          }
+        }
+      }
+      .part2{
+        text-align: left;
+        padding: 20px 170px 20px 70px;
+        @include font(20px, $font-color-6, 400, $font-arial);
+        .items{
+          li{
+            list-style: none;
+            pre{
+              margin: 0;
+            }
+          }
+          .item1{
+            .item1-1{
+              a {
+                @include font(20px, $font-color-3, 400, $font-arial);
+                padding-left: 20px;
+                text-decoration: none;
+                &::before {
+                  @include font(20px, $font-color-3, 400, $font-awesome);
+                  content: '\f15c';
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+          .item5{
+            .item5-1{
+              @include font(20px, $font-color-3, 700, $font-arial);
+            }
+          }
+          .item12{
+            .item12-1{
+              @include font(20px, $font-color-3, 700, $font-arial);
+            }
+            .item12-2{
+              a {
+                @include font(20px, $font-color-7, 700, $font-arial);
+                padding-left: 20px;
+                text-decoration: none;
+                &::before {
+                  @include font(20px, $font-color-7, 900, $font-awesome);
+                  content: '\f067';
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+          .item15{
+            @include font(20px, $font-color-3, 700, $font-arial);
+          }
+          .item22{
+            .item22-1{
+              text-decoration: none;
+              @include font(20px, $font-color-3, 700, $font-arial)
+            }
+          }
+        }
+      }
+    }
+    .part{
+      flex-basis: 100%;
+      border: 1px solid $color-third-6;
+      margin: 1px 1px 40px 1px;
+      padding: 15px 30px 15px 15px;
+      span{
+        @include font(20px, $font-color-6, 400, $font-arial);
+        line-height: 40px;
+      }
+      .btn_read_more{
+        width: 140px;
+        margin: 0;
+        .read_more{
+          font-weight: 700;
+          &::after{
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}

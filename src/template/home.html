@@ -3,6 +3,9 @@
     <div class="container-fluid bg">
         <div class="container">
             <div class="row">
+                <div class="welcome_user_hidden_on_pc">
+                    <p class="text">Welcome, User Test</p>
+                </div>
                 <div class="home_nav d-flex justify-content-between flex-row">
                     <div class="welcome_user">
                         <p class="text">Welcome, User Test</p>
@@ -10,20 +13,47 @@
                     <div class="nav">
                         <ul class="items flex-row">
                             <li class="item"><a href="#">My Orders</a></li>
-                            <li class="item"><a href="#">my account</a></li>
-                            <li class="item"><a href="#">referral program</a></li>
-                            <li class="item"><a href="#">LogOut</a></li>
+                            <li class="item hidden_on_mobile_item"><a href="#">my account</a></li>
+                            <li class="item hidden_on_mobile_item"><a href="#">referral program</a></li>
+                            <li class="item hidden_on_mobile_item"><a href="#">LogOut</a></li>
+                            <li class="hidden_on_pc">
+                                <nav role="navigation">
+                                    <div id="menuToggle">
+                                        <input type="checkbox"/>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <ul id="menu">
+                                            <a href="#">
+                                                <li class="main_menu_item">my account</li>
+                                            </a>
+                                            <a href="#">
+                                                <li>referral program</li>
+                                            </a>
+                                            <a href="#">
+                                                <li>LogOut</li>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="home_info d-flex justify-content-between flex-row">
-                    <span class="bold">Account type: <span class="text1">standard</span></span>
-                    <span class="bold">New message: <span class="text2">1</span></span>
-                    <span class="bold">Bonus points: <span class="text3">0 $</span></span>
-                    <span class="bold">Discount: <a href="#" class="text4">useruser@gmail.com</a></span>
-                    <span class="bold">Discount: <span class="text5">0 %</span></span>
+                <div class="hidden_on_mobile">
+                    <div class="home_info justify-content-between flex-column">
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="bold">Account type: <span class="text1">standard</span></span>
+                            <span class="bold">New message: <span class="text2">1</span></span>
+                            <span class="bold">Bonus points: <span class="text3">0 $</span></span>
+                            <span class="bold">Discount: <a href="#" class="text4">useruser@gmail.com</a></span>
+                            <span class="bold hidden_on_tablet">Discount: <span class="text5">0 %</span><span
+                                    class="text6"> [Up to 15%]</span></span>
+                        </div>
+                        <span class="bold hidden_on_pc">Discount: <span class="text5">0 %</span><span class="text6"> [Up to 15%]</span></span>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -34,15 +64,29 @@
             <div class="row">
                 <table class="home_table table1">
                     <tbody>
-                    <tr>
+                    <tr class="hidden_on_mobile_part">
                         <th>Order ID</th>
                         <th>Title / topic</th>
                         <th>Messages / new messages</th>
                     </tr>
-                    <tr class="light">
+                    <tr class="light hidden_on_mobile_part">
                         <td>6176835139</td>
                         <td>test</td>
-                        <td>2 / <span>2</span></td>
+                        <td><span class="mess">2 / <span class="bold_number">2</span></span></td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Order ID</p>
+                            6176835139
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Title / topic</p>
+                            test
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Messages / new messages</p>
+                            <span class="mess">2 / <span class="bold_number">2</span></span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -55,58 +99,133 @@
             <div class="row">
                 <table class="home_table table2">
                     <tbody>
-                    <tr>
+                    <tr class="hidden_on_mobile_part">
                         <th>Date</th>
                         <th>Order ID</th>
                         <th>Title / topic</th>
                         <th>Status</th>
                     </tr>
-                    <tr class="light">
+                    <tr class="light hidden_on_mobile_part">
                         <td>2017.04.27</td>
                         <td>2123344432</td>
                         <td>test</td>
                         <td>Payment verification</td>
                     </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Date</p>
+                            2017.04.27
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Order ID</p>
+                            2123344432
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Title / topic</p>
+                            test
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Status</p>
+                            Payment verification
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
             <div class="row">
-                <div class="home_info m-0 d-flex justify-content-between flex-row">
-                    <span class="item1"><a href="#">Order details</a></span>
-                    <span class="item2"><a href="#">Files (0)</a></span>
-                    <span class="item3"><a href="#">Messages (0/0)</a></span>
-                    <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
-                    <span class="item5"><a href="#">$  Pay now</a></span>
-                    <span class="item6"><a href="#">Delete order</a></span>
-                  <span class="item7"><a href="#">Additional order</a></span>
+                <div class="hidden_on_mobile">
+                    <div class="home_info m-0 justify-content-between flex-column">
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item1"><a href="#">Order details</a></span>
+                            <span class="item2"><a href="#">Files (0)</a></span>
+                            <span class="item3"><a href="#">Messages (0/0)</a></span>
+                            <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
+                            <span class="item5"><a href="#">$  Pay now</a></span>
+                            <span class="item6"><a href="#">Delete order</a></span>
+                            <span class="item7 hidden_on_tablet"><a href="#">Additional order</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden_on_pc">
+                    <div class="home_info justify-content-between flex-column">
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item1"><a href="#">Order details</a></span>
+                            <span class="item2"><a href="#">Files (0)</a></span>
+                        </div>
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item3"><a href="#">Messages (0/0)</a></span>
+                            <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
+                        </div>
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item5"><a href="#">$  Pay now</a></span>
+                            <span class="item6"><a href="#">Delete order</a></span>
+                        </div>
+                        <span class="item7 hidden_on_pc"><a href="#">Additional order</a></span>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <table class="home_table table3">
                     <tbody>
-                    <tr>
+                    <tr class="hidden_on_mobile_part">
                         <th>Date</th>
                         <th>Order ID</th>
                         <th>Title / topic</th>
                         <th>Status</th>
                     </tr>
-                    <tr class="light">
+                    <tr class="light hidden_on_mobile_part">
                         <td>2017.04.27</td>
                         <td>2123344432</td>
                         <td>test</td>
                         <td>Payment verification</td>
                     </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Date</p>
+                            2017.04.27
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Order ID</p>
+                            2123344432
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Title / topic</p>
+                            test
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Status</p>
+                            Payment verification
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
             <div class="row">
-                <div class="home_info no_border m-0 d-flex justify-content-between flex-row">
-                    <span class="item1"><a href="#">Order details</a></span>
-                    <span class="item2"><a href="#">Files (0)</a></span>
-                    <span class="item3"><a href="#">Messages (0/0)</a></span>
-                    <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
-                    <span class="item7"><a href="#">Additional order</a></span>
-                    <span class="item8"></span>
+                <div class="hidden_on_mobile">
+                    <div class="home_info no_border m-0 d-flex justify-content-between flex-row">
+                        <span class="item1"><a href="#">Order details</a></span>
+                        <span class="item2"><a href="#">Files (0)</a></span>
+                        <span class="item3"><a href="#">Messages (0/0)</a></span>
+                        <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
+                        <span class="item7"><a href="#">Additional order</a></span>
+                    </div>
+                </div>
+                <div class="hidden_on_pc">
+                    <div class="home_info justify-content-between flex-column">
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item1"><a href="#">Order details</a></span>
+                            <span class="item2"><a href="#">Files (0)</a></span>
+                        </div>
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item3"><a href="#">Messages (0/0)</a></span>
+                            <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
+                        </div>
+                        <span class="item7 hidden_on_pc"><a href="#">Additional order</a></span>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -117,32 +236,79 @@
             <div class="row">
                 <table class="home_table table2">
                     <tbody>
-                    <tr>
+                    <tr class="hidden_on_mobile_part">
                         <th>Date</th>
                         <th>Order ID</th>
                         <th>Title / topic</th>
                         <th>Status</th>
                         <th>Rate this order</th>
                     </tr>
-                    <tr class="light">
+                    <tr class="light hidden_on_mobile_part">
                         <td>2017.04.27</td>
                         <td>2123344432</td>
                         <td>test</td>
                         <td>Payment verification</td>
-                        <td class="stars"> </td>
+                        <td class="stars"></td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Date</p>
+                            2017.04.27
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Order ID</p>
+                            2123344432
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Title / topic</p>
+                            test
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Status</p>
+                            Payment verification
+                        </td>
+                    </tr>
+                    <tr class="hidden_on_pc">
+                        <td><p>Rate this order</p>
+                            <p class="stars"></p>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
             </div>
             <div class="row pb-5">
-                <div class="home_info no_border m-0 d-flex justify-content-between flex-row">
-                    <span class="item1"><a href="#">Order details</a></span>
-                    <span class="item2"><a href="#">Files (0)</a></span>
-                    <span class="item3"><a href="#">Messages (0/0)</a></span>
-                    <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
-                    <span class="item5-1"><a href="#">Revision</a></span>
-                    <span class="item6-1"><a href="#">Feedback</a></span>
-                    <span class="item7"><a href="#">Additional order</a></span>
+                <div class="hidden_on_mobile">
+                    <div class="home_info no_border m-0 d-flex justify-content-between flex-column">
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item1"><a href="#">Order details</a></span>
+                            <span class="item2"><a href="#">Files (0)</a></span>
+                            <span class="item3"><a href="#">Messages (0/0)</a></span>
+                            <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
+                            <span class="item5-1"><a href="#">Revision</a></span>
+                            <span class="item6-1"><a href="#">Feedback</a></span>
+                            <span class="item7 hidden_on_tablet"><a href="#">Additional order</a></span>
+                        </div>
+                        <span class="item7 hidden_on_pc"><a href="#">Additional order</a></span>
+                    </div>
+                </div>
+                <div class="hidden_on_pc">
+                    <div class="home_info justify-content-between flex-column">
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item1"><a href="#">Order details</a></span>
+                            <span class="item2"><a href="#">Files (0)</a></span>
+                        </div>
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item3"><a href="#">Messages (0/0)</a></span>
+                            <span class="item4"><a href="about_us_and_faq.html">Contact us</a></span>
+                        </div>
+                        <div class="d-flex justify-content-between flex-row">
+                            <span class="item5-1"><a href="#">Revision</a></span>
+                            <span class="item6-1"><a href="#">Feedback</a></span>
+                        </div>
+                        <span class="item7 hidden_on_pc"><a href="#">Additional order</a></span>
+                    </div>
                 </div>
             </div>
         </div>

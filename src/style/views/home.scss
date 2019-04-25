@@ -3,47 +3,107 @@
 .home_content {
   .bg {
     background-color: $color-primary-1;
+
+    .hidden_on_mobile {
+      display: block;
+      width: 100%;
+      @media screen and (max-width: 575px) {
+        display: none;
+      }
+    }
+    .hidden_on_mobile_item{
+      display: block;
+      @media screen and (max-width: 575px) {
+        display: none;
+      }
+    }
+
+    .hidden_on_pc {
+      display: none;
+      width: 100%;
+      @media screen and (max-width: 575px) {
+        display: flex;
+      }
+    }
+    .hidden_on_mobile_main {
+      @media screen and (max-width: 575px) {
+        display: none;
+      }
+    }
+    .welcome_user_hidden_on_pc {
+      display: none;
+      flex-basis: 100%;
+      align-items: center;
+      justify-content: left;
+      p {
+        @include font(20px, $color-third, 400, $font-regular);
+        margin: 0;
+      }
+      @media screen and (max-width: 575px) {
+        display: flex;
+        padding-top: 20px;
+      }
+    }
+
     .home_nav {
       flex-basis: 100%;
       height: 50px;
       background-color: $color-third-6;
       margin-top: 45px;
+      @media screen and (max-width: 575px) {
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+     
       .welcome_user {
         display: flex;
         flex-basis: 20%;
         align-items: center;
         justify-content: center;
         background-color: $color-third;
-        p{
+        p {
           @include font(20px, $font-color-1, 400, $font-regular);
           margin: 0;
         }
+        @media screen and (max-width: 575px) {
+          display: none;
+        }
       }
-
-      .nav{
+      .nav {
         display: flex;
         flex-basis: 60%;
         align-items: center;
         justify-content: center;
         padding: 0 15px;
-        .items{
+        @media screen and (max-width: 1200px) {
+          flex-basis: 70%;
+        }
+        @media screen and (max-width: 575px) {
+          flex-basis: 100%;
+        }
+        .items {
           display: flex;
           flex-basis: 100%;
           justify-content: space-between;
           padding: 0;
           margin: 0;
-          .item{
+          position: relative;
+          .item {
             display: inline-block;
             text-transform: uppercase;
             position: relative;
-            a{
+            a {
               text-decoration: none;
               padding: 3px 10px;
-            @include font(18px, $color-third, 500, $font-regular);
+              @include font(18px, $color-third, 500, $font-regular);
               &::after {
                 content: "I";
                 padding-left: 18px;
                 color: $color-third;
+                @media screen and (max-width: 575px) {
+                  content: none;
+                  padding-left: 0;
+                }
               }
               &:hover {
                 color: $font-color-1;
@@ -61,6 +121,9 @@
                   height: 29px;
                   width: 22px;
                   background-color: $color-third;
+                  @media screen and (max-width: 575px) {
+                    content: none;
+                  }
                 }
               }
             }
@@ -72,69 +135,197 @@
               }
             }
           }
+          .hidden_on_mobile_item{
+            display: block;
+            @media screen and (max-width: 575px) {
+              display: none;
+            }
+          }
+          .hidden_on_pc {
+            display: none;
+            @media screen and (max-width: 575px) {
+              display: block;
+              width: 10%;
+            }
+            #menuToggle {
+              display: block;
+              position: relative;
+              top: 15px;
+              left: 20px;
+              z-index: 0;
+              -webkit-user-select: none;
+              user-select: none;
+              @media screen and (max-width: 575px) {
+                top: 0;
+                left: 0;
+                width: 10%;
+              }
+              a {
+                text-decoration: none;
+                @include font(22px, $font-color-1, 400, $font-regular);
+                transition: color 0.3s ease;
+                &:hover {
+                  color: $font-color-6;
+                }
+              }
+              input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+                opacity: 0; /* hide this */
+                z-index: 7; /* and place it over the hamburger */
+                -webkit-touch-callout: none;
+              }
+              span {
+                display: block;
+                width: 33px;
+                height: 4px;
+                margin-bottom: 5px;
+                position: relative;
+                background: $color-third-1;
+                border-radius: 3px;
+                z-index: 6;
+                transform-origin: 4px 0px;
+                transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+              }
+              span:first-child {
+                transform-origin: 0% 0%;
+              }
+              span:nth-last-child(2) {
+                transform-origin: 0% 100%;
+              }
+              input:checked ~ span {
+                opacity: 1;
+                transform: rotate(45deg) translate(-2px, -1px);
+                background: $color-third-1;
+              }
+              input:checked ~ span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+              }
+              input:checked ~ span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(0, -1px);
+              }
+              input:checked ~ ul {
+                transform: none;
+              }
+            }
+
+            #menu {
+              position: absolute;
+              z-index: 5;
+              width: 500px;
+              margin: -100px 0 0 -130px;
+              padding: 125px 100px 50px 125px;
+              background: $color-secondary;
+              list-style-type: none;
+              text-transform: uppercase;
+              -webkit-font-smoothing: antialiased;
+              transform-origin: 0% 0%;
+              transform: translateX(-100%);
+              transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+              @media screen and (max-width: 580px) {
+                margin: -40px -100px 0 -430px;
+                padding: 30px 50px 0px 50px;
+                text-align: right;
+              }
+              li {
+                padding: 10px 0;
+              }
+            }
+          }
         }
       }
     }
 
-    .home_info{
+    .home_info {
+      display: flex;
       flex-basis: 100%;
       border-bottom: 1px solid $color-third;
-      padding:10px;
+      padding: 10px;
       margin-bottom: 45px;
-      .bold{
+      @media screen and (max-width: 575px) {
+        margin-bottom: 2px;
+      }
+      .hidden_on_tablet {
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
+      }
+      .hidden_on_pc {
+        display: none;
+        @media screen and (max-width: 1200px) {
+          display: inline-block;
+          width: 100%;
+        }
+        @media screen and (max-width: 575px) {
+          text-align: center;
+        }
+      }
+      .bold {
         @include font(20px, $font-color-6, 700, $font-arial);
-        span, a{
+        span, a {
           @include font(20px, $font-color-6, 400, $font-arial);
         }
-        .text3{
+        .text3 {
           color: $font-color-3;
         }
-        .text2{
-          &::after{
+        .text2 {
+          &::after {
             @include font(20px, $font-color-3, 400, $font-awesome);
             content: '\f0e0';
             padding-left: 5px;
           }
         }
+        .text6 {
+          padding-left: 5px;
+          @include font(20px, $font-color-3, 700, $font-arial);
+        }
       }
 
-      span{
+      span {
         @include font(20px, $font-color-6, 400, $font-arial);
-        a{
+        a {
           @include font(20px, $font-color-6, 400, $font-arial);
           text-decoration: none;
         }
       }
 
-      .item1{
-        &::before{
+      .item1 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f05a';
           padding-right: 5px;
         }
       }
-      .item2{
-        &::before{
+      .item2 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f15c';
           padding-right: 5px;
         }
       }
-      .item3{
-        &::before{
+      .item3 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f0e0';
           padding-right: 5px;
         }
       }
-      .item4{
-        &::before{
+      .item4 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f1d8';
           padding-right: 5px;
         }
       }
-      .item6{
+      .item6 {
         a {
           color: $font-color-7;
           &::before {
@@ -144,33 +335,34 @@
           }
         }
       }
-      .item5-1{
-        &::before{
+      .item5-1 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f0e2';
           padding-right: 5px;
         }
       }
-      .item6-1{
-        &::before{
+      .item6-1 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f075';
           padding-right: 5px;
         }
       }
-      .item7{
-        &::before{
+      .item7 {
+        &::before {
           @include font(20px, $font-color-3, 400, $font-awesome);
           content: '\f044';
           padding-right: 5px;
         }
       }
-      .item8{
+      .item8 {
         width: 35%;
       }
+
     }
 
-    .table_title{
+    .table_title {
       @include font(22px, $font-color-1, 500, $font-regular);
       text-transform: uppercase;
       padding-left: 15px;
@@ -180,45 +372,76 @@
       margin: 0;
     }
 
-    .home_table{
+    .home_table {
       width: 100%;
       background-color: $color-third-1;
-      tbody{
-        width: 100%;
+      .hidden_on_pc {
+        display: none;
+        @media screen and (max-width: 575px) {
+          display: block;
+        }
       }
-      tr{
+      tbody {
         width: 100%;
-        .stars{
-          &::before{
+        .hidden_on_mobile_part {
+          @media screen and (max-width: 575px) {
+            display: none;
+          }
+        }
+      }
+      tr {
+        width: 100%;
+        .stars {
+          &::before {
             @include font(20px, $font-color-3, 400, $font-awesome);
             content: '\f005 \f005 \f005 \f005 \f005';
           }
         }
-        th,td{
+        .mess {
+          &::before {
+            @include font(20px, $font-color-3, 400, $font-awesome);
+            content: '\f0e0';
+            padding-right: 5px;
+          }
+        }
+        th, td {
           text-align: center;
           align-items: center;
           @include font(20px, $font-color-6, 700, $font-arial);
           border: 3px solid $color-third-6;
         }
-        td{
+        td {
           font-weight: 400;
-          span{
-            color:$font-color-3;
+          p {
+            @include font(20px, $font-color-6, 700, $font-arial);
+          }
+          .bold_number {
+            color: $font-color-3;
             font-weight: 700;
           }
         }
       }
+      .hidden_on_pc {
+        td {
+          display: inline-block;
+          width: 100%;
+          border: 1px solid $color-third-6;
+          margin: 1px 0;
+        }
+      }
     }
 
-    .table1{
+    .table1 {
       margin-bottom: 45px;
     }
-    .table3{
+    .table3 {
       margin-top: 2px;
     }
-    .no_border{
+    .no_border {
       border: none;
-      margin-bottom: 45px;
+      padding-bottom: 45px;
+      @media screen and (max-width: 1200px) {
+      }
     }
   }
 }

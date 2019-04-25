@@ -22,6 +22,30 @@
   }
 }
 
+.btn-back{
+  display: inline-block;
+  text-transform: uppercase;
+  @include font(24px, $color-third, 700, $font-regular);
+  background-color: transparent;
+  line-height: 24px;
+  padding: 5px;
+  margin-bottom: 5px;
+  &::before{
+    @include font(30px, $color-third, 700, $font-awesome);
+    content:'\f0d9';
+    padding-right: 5px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: $color-third;
+    &::before{
+      color: #fff;
+      background-color: $color-third;
+    }
+  }
+}
+
 .btn-big {
   display: inline-block;
   width: 350px;
