@@ -1,5 +1,3 @@
-@import "../partials/fonts";
-
 .blog {
   .blog_bg {
     height: auto;
@@ -292,7 +290,7 @@
           }
 
           .img3 {
-            background: url(../../img/img3.png) center no-repeat;
+            background: url(../img/img3.png) center no-repeat;
           }
           .title_and_text {
             display: flex;
@@ -439,7 +437,7 @@
             }
           }
           .bg_img {
-            background: url(../../img/img2.png) center no-repeat;
+            background: url(../img/img2.png) center no-repeat;
             width: 400px;
             height: 300px;
             position: relative;
@@ -452,7 +450,7 @@
             }
           }
           .img4 {
-            background: url(../../img/img4.png) center no-repeat;
+            background: url(../img/img4.png) center no-repeat;
           }
           .img2 {
             bottom: -10px;

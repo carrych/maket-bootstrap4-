@@ -1,5 +1,3 @@
-@import "../partials/fonts";
-
 .about_us {
   .main_content_head {
     background-color: $color-primary-1;
@@ -80,7 +78,7 @@
   }
 
   .main_content_subhead {
-    background: url(../../img/bg_about_us.svg) center no-repeat;
+    background: url(../img/bg_about_us.svg) center no-repeat;
     width: 100%;
     height: 358px;
     background-size: cover;
@@ -156,7 +154,7 @@
       }
     }
     .place_for_banner1, .place_for_banner2 {
-      background: url(../../img/bg_about_us.svg) center no-repeat;
+      background: url(../img/bg_about_us.svg) center no-repeat;
       @include font(40px, $font-color-1, 400, $font-regular);
       text-align: center;
       align-items: center;
@@ -269,7 +267,7 @@
     }
 
     .contact_us {
-      background: url(../../img/bg_about_us1.svg) center no-repeat;
+      background: url(../img/bg_about_us1.svg) center no-repeat;
       background-size: cover;
       display: flex;
       height: 110px;
@@ -319,7 +317,7 @@
             position: absolute;
             width: 100%;
             height: 30px;
-            background: url(../../img/Chat.svg) no-repeat;
+            background: url(../img/Chat.svg) no-repeat;
             background-size: contain;
             top: 5%;
             left: 35%;

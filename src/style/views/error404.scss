@@ -1,11 +1,9 @@
-@import "../partials/fonts";
-
 .content404 {
   .bg404 {
     height: 905px;
     background-color: $color-primary;
     .bg_img {
-      background: url(../../img/Bg404.svg) center no-repeat;
+      background: url(../img/Bg404.svg) center no-repeat;
       background-size: cover;
       position: absolute;
       width: 100%;
@@ -16,7 +14,7 @@
     .logo {
       display: flex;
       margin: 72px 0 70px 0;
-      background: url(../../img/Logo2.svg) center no-repeat;
+      background: url(../img/Logo2.svg) center no-repeat;
       background-size: contain;
       height: 82px;
       flex-basis: 100%;
@@ -25,7 +23,7 @@
     .bg_bullet1 {
       display: block;
       position: absolute;
-      background: url(../../img/bullet_1.svg) center no-repeat;
+      background: url(../img/bullet_1.svg) center no-repeat;
       background-size: contain;
       height: 404px;
       width: 100%;
@@ -47,7 +45,7 @@
     .bg_bullet2 {
       display: block;
       position: absolute;
-      background: url(../../img/bullet_2.svg) center no-repeat;
+      background: url(../img/bullet_2.svg) center no-repeat;
       background-size: contain;
       height: 542px;
       width: 75%;

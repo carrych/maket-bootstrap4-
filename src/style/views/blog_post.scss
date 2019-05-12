@@ -1,5 +1,3 @@
-@import "../partials/fonts";
-
 .blog_post {
   .blog_post_bg {
     height: auto;
@@ -90,7 +88,7 @@
         }
 
         .img {
-          background: url(../../img/img2.png) center no-repeat;
+          background: url(../img/img2.png) center no-repeat;
           height: 500px;
           width: 80%;
           background-size: cover;
@@ -691,7 +689,7 @@
                   &::after {
                     content: '';
                     display: inline-block;
-                    background: url(../../img/Arched-arrow-ltr.svg) center no-repeat;
+                    background: url(../img/Arched-arrow-ltr.svg) center no-repeat;
                     width: 21px;
                     height: 9px;
                     background-size: contain;
